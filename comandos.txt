@@ -1,0 +1,13 @@
+- npm init - y
+- Convenção de commit https://www.conventionalcommits.org/en/v1.0.0/
+- Pacote npm para proibir commits fora da convenção: npm i -D git-commit-msg-linter
+- Instalar Typescript: npm i -D typescript @types/node
+- Adicionar tsconfig.json
+- Instalar linter: npm i -D eslint eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-promise eslint-plugin-standard @typescrit-eslint/eslint-plugin
+-Instalar linter : npm i -D eslint-plugin-node
+-Adicionar .eslintrc.json
+-Adicionar .eslintignore
+-Adicionar: npm i -D lint-staged husky
+-Adicionar lintstagedrc.json e huskyrc.json
+- Instalar Jest: npm i -D jest @types/jest ts-jest
+- Adicionar jest.config.js

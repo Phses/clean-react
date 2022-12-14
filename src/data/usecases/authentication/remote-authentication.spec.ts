@@ -7,7 +7,7 @@ type SutTypes = {
   httpPostCliente: HttpPostClientSpy
 }
 
-const makeSut = (url: string = faker.): SutTypes => {
+const makeSut = (url: string = faker.internet.url()): SutTypes => {
   const httpPostCliente = new HttpPostClientSpy()
   const sut = new RemoteAuthentication(url, httpPostCliente)
   return {
@@ -18,7 +18,7 @@ const makeSut = (url: string = faker.): SutTypes => {
 
 describe('RemoteAuthentication', () => {
   test('Should call HttpClient with correct url', async () => {
-    const url = 'other_url'
+    const url = faker.internet.url()
     const { sut, httpPostCliente } = makeSut(url)
     await sut.auth()
     expect(httpPostCliente.url).toBe(url)

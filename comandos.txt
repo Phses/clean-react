@@ -12,3 +12,4 @@
 -Adicionar lintstagedrc.json e huskyrc.json
 - Instalar Jest: npm i -D jest @types/jest ts-jest
 - Adicionar jest.config.js
+- Adicionar Faker: npm i -D faker @types/faker

@@ -1,4 +1,4 @@
-import { RemoteAuthentication } from './remote-authentication'
+import { RemoteAuthentication } from '@/data/usecases/authentication/remote-authentication'
 import { HttpPostClientSpy } from '@/data/tests/mock-http-client'
 import { mockAccountModel, mockAuthentication } from '@/domain/Test/mock-account'
 import { InvalidCredentialsError } from '@/domain/Errors/Invalid-credentials-erro'

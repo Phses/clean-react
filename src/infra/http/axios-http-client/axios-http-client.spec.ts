@@ -10,11 +10,11 @@ const makeSut = (): AxiosHttpClient => {
 }
 
 describe('AxiosHttpClient', () => {
-  test('Should call AxiosHttpClient with correct url', async () => {
+  test('Should call AxiosHttpClient with correct url and verb', async () => {
     const url = faker.internet.url()
     const sut = makeSut()
     await sut.post({ url })
     // Confere se uma funcao mockada é chamada com o argumento passado
-    expect(mockedAxios).toHaveBeenCalledWith(url)
+    expect(mockedAxios.post).toHaveBeenCalledWith(url)
   })
 })

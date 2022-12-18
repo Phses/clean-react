@@ -3,6 +3,7 @@ import axios from 'axios'
 
 export class AxiosHttpClient {
   async post (params: HttpPostParams<any>): Promise<void> {
-    await axios(params.url)
+    // axios.post e uma forma de garantir qual verbo esta sendo chamado
+    await axios.post(params.url)
   }
 }

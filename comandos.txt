@@ -15,3 +15,5 @@
 - Adicionar Faker: npm i -D faker @types/faker
 - Adicionar Axios: npm i Axios
 - Adicionar Axios types: npm i @types/axios -D
+- Adicionar React:  npm i react react-dom
+- Adicionar Types React: npm i @types/react @types/react-dom -D

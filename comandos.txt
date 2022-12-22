@@ -17,3 +17,4 @@
 - Adicionar Axios types: npm i @types/axios -D
 - Adicionar React:  npm i react react-dom
 - Adicionar Types React: npm i @types/react @types/react-dom -D
+- Adicionar web pack, webpack cli e webpack server pra subir o react app: npm i -D webpack webpack-cli webpack-dev-server

@@ -20,3 +20,5 @@
 -Adicionar eslint plugin react: npm i -D eslint-plugin-react
 - Adicionar web pack, webpack cli e webpack server pra subir o react app: npm i -D webpack webpack-cli webpack-dev-server
 -Adicionar clean webpack: npm i -D clean-webpack-plugin
+- Adicionar sass: npm i -D node-sass sass-loader css-loader style-loader ts-loader
+- Adicionar Identity: npm i -D identity-obj-proxy

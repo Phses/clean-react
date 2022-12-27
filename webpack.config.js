@@ -30,18 +30,24 @@ module.exports = {
           modules: true
         }
       }, {
-        loader: 'scss-loader'
+        loader: 'sass-loader'
       }]
     }]
   },
   devServer: {
-    contentBase: './public',
-    writeToDisk: true,
-    historyApiFallback: true
+    static: './public',
+    devMiddleware: {
+      writeToDisk: true
+    },
+    historyApiFallback: {
+      rewrites: [
+        { from: /./, to: '/index.html' }
+      ]
+    }
   },
   externals: {
     react: 'React',
-    'react-dom': 'ReactDom'
+    'react-dom': 'ReactDOM'
   },
   plugins: [
     new CleanWebpackPlugin()

@@ -22,3 +22,4 @@
 -Adicionar clean webpack: npm i -D clean-webpack-plugin
 - Adicionar sass: npm i -D node-sass sass-loader css-loader style-loader ts-loader
 - Adicionar Identity: npm i -D identity-obj-proxy
+-Adicionar React Router: npm i react-router-dom @types/react-router-dom

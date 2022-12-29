@@ -23,3 +23,5 @@
 - Adicionar sass: npm i -D node-sass sass-loader css-loader style-loader ts-loader
 - Adicionar Identity: npm i -D identity-obj-proxy
 -Adicionar React Router: npm i react-router-dom @types/react-router-dom
+-Adicionar npm i -D @testing-library/react
+- Adicionar npm install -D jest-environment-jsdom

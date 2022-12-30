@@ -23,6 +23,14 @@
     }
     .submit {
       margin-top: 32px;
+      &:disabled {
+        background-color: $disbledBackground;
+        color: $disbledColor;
+        cursor: inherit;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
     .link {
       text-align: center;

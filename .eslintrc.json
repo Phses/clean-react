@@ -18,6 +18,7 @@
     "@typescript-eslint/method-signature-style": "warn",
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off"
   }
 }

@@ -1,19 +1,34 @@
 import React from 'react'
-import { render, RenderResult } from '@testing-library/react'
+import { render, RenderResult, cleanup, fireEvent } from '@testing-library/react'
 import Login from './login'
+import { validation } from '@/presentation/protocols/validation'
 
 type sutTypes = {
   sut: RenderResult
+  validationSpy: ValidationSpy
+}
+
+class ValidationSpy implements validation {
+  errorMessage: string
+  input: object
+  validation (input: object): string {
+    this.input = input
+    return this.errorMessage
+  }
 }
 
 const makeSut = (): sutTypes => {
-  const sut = render(<Login/>)
+  const validationSpy = new ValidationSpy()
+  const sut = render(<Login validation={ validationSpy }/>)
   return {
-    sut
+    sut,
+    validationSpy
   }
 }
 
 describe('Login Component', () => {
+  afterEach(cleanup)
+
   test('Should render with initial state', () => {
     const { sut } = makeSut()
     const errorWrap = sut.getByTestId('error-wrap')
@@ -26,5 +41,13 @@ describe('Login Component', () => {
     const passwordStatus = sut.getByTestId('password-status')
     expect(passwordStatus.title).toBe('Campo obrigatorio')
     expect(passwordStatus.textContent).toBe('🔴')
+  })
+  test('Shold call validation with correct value', () => {
+    const { sut, validationSpy } = makeSut()
+    const emailInput = sut.getByTestId('email')
+    fireEvent.input(emailInput, { target: { value: 'anyEmail' } })
+    expect(validationSpy.input).toEqual({
+      email: 'anyEmail'
+    })
   })
 })
